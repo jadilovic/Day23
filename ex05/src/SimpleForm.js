@@ -2,6 +2,15 @@
 import React, { Component } from "react";
 
 class SimpleForm extends Component {
+    constructor(props){
+        super(props);
+        this.state = {name: "Yoda"};
+    }
+
+    onChangeHandler = (event) => {
+        this.setState({name: event.target.value});
+    }
+    
   render() {
     return (
       <form>
@@ -12,3 +21,5 @@ class SimpleForm extends Component {
     );
   }
 }
+
+export default SimpleForm;
